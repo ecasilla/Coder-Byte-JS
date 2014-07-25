@@ -1,9 +1,9 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-function firstFactorial (num){
-    if (num === 0|| typeof num !== 'number'){
-      return 1;
+function firstFactorial(num) {
+    if (num === 0 || typeof num !== 'number') {
+        return 1;
     } else {
-      return num * firstFactorial( num - 1 );
+        return num * firstFactorial(num - 1);
     }
 }
 
@@ -2565,17 +2565,17 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
 }).call(this,require("buffer").Buffer)
 },{"buffer":3}],7:[function(require,module,exports){
 /*jshint -W079 */
-    var firstFactorial  = require("../../../katas/factorial/factorial.js");
-          expect = require("../../helpers/expect.js");
+var firstFactorial = require("../../../katas/factorial/factorial.js");
+var expect = require("../../helpers/expect.js");
 
 describe("Factorial", function() {
-  it("It will give you the factorial of number ",function() {
-    expect(firstFactorial(4)).to.be(24);
-  });
-  it("should give you 1 if you pass in 0 or any other data type ", function() {
-    expect(firstFactorial({})).to.be(1)
-    expect(firstFactorial(0)).to.be(1)
-  });
+    it("It will give you the factorial of number ", function() {
+        expect(firstFactorial(4)).to.be(24);
+    });
+    it("should give you 1 if you pass in 0 or any other data type ", function() {
+        expect(firstFactorial({})).to.be(1);
+        expect(firstFactorial(0)).to.be(1);
+    });
 });
 
 },{"../../../katas/factorial/factorial.js":1,"../../helpers/expect.js":6}],8:[function(require,module,exports){

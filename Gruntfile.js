@@ -15,8 +15,8 @@ module.exports = function(grunt) {
         }, //jshint
 
         browserify: {
-           options: {
-              debug: true,
+            options: {
+                debug: true,
             },
             test: {
                 files: {
