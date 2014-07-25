@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
     'use strict';
+    var remapify = require('remapify');
+
     //project Config
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -13,12 +15,12 @@ module.exports = function(grunt) {
         }, //jshint
 
         browserify: {
+           options: {
+              debug: true,
+            },
             test: {
                 files: {
                     'test/browserified.js': ['test/unit/**/*.js'],
-                },
-                options: {
-                    debug: true
                 }
             }
         },

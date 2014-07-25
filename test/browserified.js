@@ -1,4 +1,15 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+function firstFactorial (num){
+    if (num === 0|| typeof num !== 'number'){
+      return 1;
+    } else {
+      return num * firstFactorial( num - 1 );
+    }
+}
+
+module.exports = firstFactorial;
+
+},{}],2:[function(require,module,exports){
 function firstReverse(str) {
     if (typeof str !== "string") {
         return "Please call with strings";
@@ -14,7 +25,7 @@ function firstReverse(str) {
 
 module.exports = firstReverse;
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -1185,7 +1196,7 @@ function assert (test, message) {
   if (!test) throw new Error(message || 'Failed assertion')
 }
 
-},{"base64-js":3,"ieee754":4}],3:[function(require,module,exports){
+},{"base64-js":4,"ieee754":5}],4:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -1307,7 +1318,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 exports.read = function(buffer, offset, isLE, mLen, nBytes) {
   var e, m,
       eLen = nBytes * 8 - mLen - 1,
@@ -1393,7 +1404,7 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128;
 };
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 (function (Buffer){
 (function(global, module) {
 
@@ -2552,7 +2563,22 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
 );
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":2}],6:[function(require,module,exports){
+},{"buffer":3}],7:[function(require,module,exports){
+/*jshint -W079 */
+    var firstFactorial  = require("../../../katas/factorial/factorial.js");
+          expect = require("../../helpers/expect.js");
+
+describe("Factorial", function() {
+  it("It will give you the factorial of number ",function() {
+    expect(firstFactorial(4)).to.be(24);
+  });
+  it("should give you 1 if you pass in 0 or any other data type ", function() {
+    expect(firstFactorial({})).to.be(1)
+    expect(firstFactorial(0)).to.be(1)
+  });
+});
+
+},{"../../../katas/factorial/factorial.js":1,"../../helpers/expect.js":6}],8:[function(require,module,exports){
 /*jshint -W079 */
 var firstReverse = require("../../../katas/first_reverse/first_reverse.js");
 var expect = require("../../helpers/expect.js");
@@ -2567,4 +2593,4 @@ describe('First Reverse', function() {
 
 });
 
-},{"../../../katas/first_reverse/first_reverse.js":1,"../../helpers/expect.js":5}]},{},[6]);
+},{"../../../katas/first_reverse/first_reverse.js":2,"../../helpers/expect.js":6}]},{},[7,8]);

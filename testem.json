@@ -4,7 +4,7 @@
   "framework": "mocha",
   "launchers": {
     "Mocha": {
-      "command": "mocha test/browserified.js -c -s 1000 -R nyan -u bdd -t 3000 --inline-diffs "
+      "command": "mocha test/browserified.js -c -s 1000 -R list -u bdd -t 3000 --inline-diffs "
     },
     "Coverage" : {
       "command": "grunt coverage"
