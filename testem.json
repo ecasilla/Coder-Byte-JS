@@ -1,0 +1,22 @@
+{
+  "launch_in_dev" : ["Mocha","Chrome"],
+  "launch_in_ci": ["Coverage","Mocha","phamtonjs"],
+  "framework": "mocha",
+  "launchers": {
+    "Mocha": {
+      "command": "mocha test/browserified.js -c -s 1000 -R nyan -u bdd -t 3000 --inline-diffs "
+    },
+    "Coverage" : {
+      "command": "grunt coverage"
+    }
+  },
+  "serve_files": [ "test/browserified.js","test/helpers/expect.js" ],
+  "src_files": [
+    "katas/**/*.js",
+    "test/helpers/*.js",
+    "test/unit/**/*.js"
+  ],
+   "before_tests": "grunt test",
+    "on_exit": "rm test/browserified.js"
+}
+
