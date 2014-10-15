@@ -16,7 +16,7 @@ function letterChanger(string) {
 function vowelCheck(charr) {
   var vowel = 'aeiou'.split("");
   if (vowel.indexOf(charr) !== -1) {
-   charr = charr.toUpperCase();
+    charr = charr.toUpperCase();
   }
   return charr;
 }
@@ -31,10 +31,9 @@ function alphabetcheck(charr) {
     if(charr === 25){
       charr = alphabet[0];
     }else{
-      charr = alphabet[charr]
+      charr = alphabet[charr];
     }
   }
   return charr;
 }
 
-letterChanger("hello*3")
