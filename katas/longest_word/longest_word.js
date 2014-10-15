@@ -1,4 +1,6 @@
 function longestWord(strings) {
+    strings = strings == null ? '' : String(strings);
+
     var longest = "";
     var strArray = strings.split(" ");
     for (var i = 0, l = strArray.length; i < l; i++) {

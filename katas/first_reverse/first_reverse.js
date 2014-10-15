@@ -1,7 +1,6 @@
 function firstReverse(str) {
-    if (typeof str !== "string") {
-        return "Please call with strings";
-    }
+    str = str == null ? '' : String(str);
+
     var strArray = str.split("");
     var reverse = [];
     for (var i = strArray.length - 1; i >= 0; i--) {
