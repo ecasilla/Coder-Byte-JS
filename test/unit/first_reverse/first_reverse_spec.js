@@ -1,13 +1,14 @@
 /*jshint -W079 */
-var firstReverse = require("../../../katas/first_reverse/first_reverse.js");
-var expect = require("../../helpers/expect.js");
+var path = require('path');
+var firstReverse = require(path.join(process.cwd(),"katas/first_reverse/first_reverse.js"));
+var expect = require("chai").expect;
 
 describe('First Reverse', function() {
     it('should reverse a string', function() {
-        expect(firstReverse("Hello")).to.be("olleH");
+        expect(firstReverse("Hello")).to.equal("olleH");
     });
     it("should fail if its given anything but a string", function() {
-        expect(firstReverse({})).to.be("Please call with strings");
+        expect(firstReverse({})).to.equal("Please call with strings");
     });
 
 });

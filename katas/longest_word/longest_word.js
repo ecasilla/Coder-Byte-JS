@@ -12,5 +12,3 @@ function longestWord(strings) {
 }
 
 module.exports = longestWord;
-
-longestWord("Hello ernie! why so serious");
