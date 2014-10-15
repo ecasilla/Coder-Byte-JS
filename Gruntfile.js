@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                     'test/browserified.js': ['test/unit/**/*.js'],
                 }
             }
-        },
+        }, //browserify
 
         jsbeautifier: {
             files: ["katas/**/*.js", "test/unit/**/*.js", "Gruntfile.js"],
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
                     }
                 }
             }
-        },
+        }, //copy
 
         plato: {
             lint: {
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
                     'reports': ['katas/**/*.js']
                 }
             },
-        },
+        }, // plato
 
         mocha_istanbul: {
             coverage: {
@@ -99,7 +99,7 @@ module.exports = function(grunt) {
                     excludes: ['node_modules', 'dist']
                 }
             }
-        },
+        }, //mocha_istanbul
 
         watch: {
             options: {
@@ -120,7 +120,7 @@ module.exports = function(grunt) {
                     event: ['added']
                 }
             }
-        },
+        }, //watch
 
         concurrent: {
             target1: ['watch'],
