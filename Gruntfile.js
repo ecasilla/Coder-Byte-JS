@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
     'use strict';
-    var remapify = require('remapify');
 
     //project Config
     grunt.initConfig({
@@ -14,17 +13,6 @@ module.exports = function(grunt) {
             }
         }, //jshint
 
-        browserify: {
-            options: {
-                debug: true,
-            },
-            test: {
-                files: {
-                    'test/browserified.js': ['test/unit/**/*.js'],
-                }
-            }
-        }, //browserify
-
         jsbeautifier: {
             files: ["katas/**/*.js", "test/unit/**/*.js", "Gruntfile.js"],
             options: {
@@ -32,6 +20,16 @@ module.exports = function(grunt) {
             },
         },
 
+        simplemocha: {
+          options: {
+            globals: ['expect'],
+            timeout: 3000,
+            ignoreLeaks: true,
+            ui: 'bdd',
+            reporter: 'spec'
+          },
+          all: { src: ['test/**/*.js'] }
+        },
         copy: {
             spec: {
                 expand: true,
@@ -141,7 +139,7 @@ module.exports = function(grunt) {
     }
 
     grunt.registerTask('default', ['concurrent:target1'])
-    grunt.registerTask('test', ['newer:browserify:test'])
     grunt.registerTask('coverage', ['mocha_istanbul', "plato"])
+    grunt.registerTask('test', ['simplemocha'])
 
 } //grunt exports

@@ -4,7 +4,7 @@
   "description": "A repo with all my javascript coder byter solutions",
   "main": "index.js",
   "scripts": {
-    "test": "testem"
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
@@ -29,10 +29,10 @@
     "grunt-jsbeautifier": "^0.2.7",
     "grunt-mocha-istanbul": "^1.5.0",
     "grunt-newer": "^0.7.0",
+    "grunt-simple-mocha": "^0.4.0",
     "jshint-stylish": "^0.4.0",
     "mocha": "^1.21.0",
     "remapify": "^0.1.6",
-    "testem": "^0.6.17",
     "underscore": "^1.6.0"
   }
 }
