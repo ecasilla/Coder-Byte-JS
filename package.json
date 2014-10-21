@@ -4,7 +4,7 @@
   "description": "A repo with all my javascript coder byter solutions",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "mocha --recursive -R spec"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,7 @@
   },
   "homepage": "https://github.com/ecasilla/Coder-Byte-JS",
   "devDependencies": {
-    "browserify": "^5.8.0",
     "grunt": "^0.4.5",
-    "grunt-browserify": "^2.1.4",
     "grunt-concurrent": "^0.5.0",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
@@ -32,7 +30,6 @@
     "grunt-simple-mocha": "^0.4.0",
     "jshint-stylish": "^0.4.0",
     "mocha": "^1.21.0",
-    "remapify": "^0.1.6",
     "underscore": "^1.6.0"
   }
 }
