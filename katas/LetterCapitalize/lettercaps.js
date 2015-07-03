@@ -6,7 +6,7 @@ function letterCaps(str) {
     var comp = [];
     for (var i = 0, l = stringArr.length; i < l; i++) {
         var v = stringArr[i],
-            upper = v.charAt(0).toUpperCase() + v.slice(1);
+        upper = v.charAt(0).toUpperCase() + v.slice(1);
         comp.push(upper)
     }
     return comp.join(" ")

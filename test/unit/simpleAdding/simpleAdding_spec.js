@@ -1,9 +1,8 @@
 /*jshint -W079 */
 var path = require('path');
 var simpleAdding = require(path.join(process.cwd(), "katas/simpleAdding/simpleAdding.js"));
-var expect = require("chai").expect;
 
-describe('The simple adding module', function() {
+describe('Simple Adding: ', function() {
 
     it('should return a integer', function() {
         expect(simpleAdding(1)).to.be.a('number');

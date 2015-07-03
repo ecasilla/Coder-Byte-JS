@@ -1,10 +1,9 @@
 /*jshint -W079 */
 
 var path = require('path');
-var longestWord = require(path.join(process.cwd(), 'katas/longest_word/longest_word')),
-    expect = require('chai').expect;
+var longestWord = require(path.join(process.cwd(), 'katas/longest_word/longest_word'));
 
-describe('this is the longest word module', function() {
+describe('Longest word: ', function() {
     it('should return a string', function() {
         expect(longestWord("Hello ernie! why so serious")).to.be.a('string');
     });
