@@ -4,3 +4,8 @@
 
 [CoderByte](http://coderbyte.com)
 
+
+## Run Unit Tests
+```
+ grunt test
+```
