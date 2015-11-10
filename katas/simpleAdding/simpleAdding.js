@@ -16,10 +16,7 @@ function simpleAdding(num) {
 }
 
 function add(array) {
-    var num = 0;
-    for (var i = 0, l = array.length; i < l; i++) {
-        var v = array[i];
-        num = v + num;
-    }
-    return num;
+  return array.reduce(function(acc,curr){
+    return acc + curr;
+  },0);
 }

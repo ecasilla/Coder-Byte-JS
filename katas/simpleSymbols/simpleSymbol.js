@@ -1,16 +1,17 @@
 module.exports = simpleSymbol;
 
-function simpleSymbol (string) {
+function simpleSymbol(string) {
   string = string == null ? '' : String(string);
   if (string.match(/\+[a-zA-Z]\+/)) {
-   log("Hello") 
-  } 
-  //var strArr = string.split("");
-  //log(strArr)
+    return true;
+  }else{
+    return false;
+  }
 }
 
 function log() {
-  console.log.apply(this,arguments);
+    console.log.apply(this, arguments);
 }
 
-simpleSymbol("f++d+")
+simpleSymbol("f++d+");
+simpleSymbol("+d+=3=+s+");

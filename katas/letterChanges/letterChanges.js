@@ -1,27 +1,31 @@
 module.exports = letterChanger;
 
 function letterChanger(string) {
-    string = string == null ? '' : String(string);
-    mixed = [],
-    strArr = string.toLowerCase().split("");
-    for (var i = 0, l = strArr.length; i < l; i++) {
-        var charr = strArr[i];
-        charr = alphabetcheck(charr)
-        charr = vowelCheck(charr);
-        mixed.push(charr);
-    }
-    return mixed.join("");
+    var string = string == null ? '' : String(string);
+    var strArr = string.toLowerCase().split("");
+
+    return strArr.map(function(value,index){
+      var charr = strArr[index]
+      charr = alphabetCheck(charr)
+      charr = vowelCheck(charr);
+      return charr;
+    }).join("");
 }
+
+letterChanger(string) //sideeffects
 
 function vowelCheck(charr) {
     var vowel = 'aeiou'.split("");
     if (vowel.indexOf(charr) !== -1) {
-        charr = charr.toUpperCase();
+        //charr = charr.toUpperCase();
+        return true
     }
-    return charr;
+    return false;
 }
 
-function alphabetcheck(charr) {
+var result = letterChanger(upperCase(vowelCheck(alphabetCheck))))
+
+function alphabetCheck(charr) {
     var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
     if (charr.match(/([^a-zA-Z])/gm)) {
         return charr;

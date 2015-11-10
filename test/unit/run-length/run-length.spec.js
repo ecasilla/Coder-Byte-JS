@@ -19,4 +19,3 @@ describe('Run length: ', function() {
         done();
     });
 });
-
